@@ -37,8 +37,28 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 The function will be given a class_size by number of students, odds, and Number_of_times brownlow made the bet.  It will give you back how much Brownlows earnings were. We will use it to answer our three questions below. If you can, improve this function by giving default values to some of its inputs. 
 
 # In the class and payoff as described  If you highered 40 brownlow substitute teachers to do the same thing that Brownlow did then.
+
+
 ## what is their average earnings
+
+```{r}
+options(digits = 1)
+teacher <- numeric(200)
+for(i in 1:200) {
+teacher[i]=BrLw()
+
+
+
+}
+savestats <- favstats(teacher) 
+
+```
+
+We can infer that Mr.BrLw is making an average of `r savestats$mean` with a standard deviation of `r savestats$sd`. 
+
 ## the standard deviation and a 95% confidence interval for their earnings?
+At a 95% confidence interval, BrLw's earning is `r savestats$mean - 2*savestats$sd` to `r savestats$mean + 2*savestats$sd`
+
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
@@ -80,7 +100,7 @@ favstats(teacher)
 
 ```
 
-After multiple attempts, the number 28.3 was the closest to the wanted mean of 0. Yet, 28.3 is not possible due to the 0.3 that doesn't count for a whole student; therefore using my mathmatics common sense we would round down 28.3 to 28 students. 
+After multiple attempts, the number 28.3 was the closest to the wanted mean of 0. Yet, 28.3 is not possible due to the 0.3 that doesn't count for a whole student; therefore using my mathematics common sense we would round down 28.3 to 28 students. 
 
 
 
