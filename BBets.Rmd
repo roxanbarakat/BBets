@@ -42,8 +42,21 @@ The function will be given a class_size by number of students, odds, and Number_
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
-
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
+
+```{r}
+teacher <- numeric(200)
+for(i in 1:200) {
+teacher[i]=BrLw(odds = 4.36)
+
+
+
+}
+favstats(teacher)
+
+```
+
+Due to having an unstable mean when there was 40 teachers, I extended the budget and hired 200 teachers in order to have more mean stability. When running numbers using 200 teachers, there was a slight but no significant change in the mean. Currently, the odds are set to 4.36.
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
