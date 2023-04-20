@@ -68,8 +68,19 @@ Due to having an unstable mean when there was 40 teachers, I extended the budget
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+teacher <- numeric(200)
+for(i in 1:200) {
+teacher[i]=BrLw(numClass = 28.3)
 
 
+
+}
+favstats(teacher)
+
+```
+
+After multiple attempts, the number 28.3 was the closest to the wanted mean of 0. Yet, 28.3 is not possible due to the 0.3 that doesn't count for a whole student; therefore using my mathmatics common sense we would round down 28.3 to 28 students. 
 
 
 
